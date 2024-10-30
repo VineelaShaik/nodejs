@@ -20,9 +20,10 @@ app.use(express.urlencoded({ extended: true }));
 const BlogRoutes= require("./routes/blogRoutes")
 app.use("/api/v1/blog",BlogRoutes)
     
-// app.use("/*",(res)=>
-//     { 
-//         res.send("No routes found");
-//     });
+app.use("/*",(res)=>
+    { 
+        res.send("No routes found");
+    });
   
 app.listen(4000, () => console.log("Server has started in port: 4000"))
+
